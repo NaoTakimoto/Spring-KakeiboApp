@@ -42,11 +42,11 @@ jobs:
 
 
 #*
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: n148/springapp
+#       - name: Docker meta
+#         id: meta
+#         uses: docker/metadata-action@v3
+#         with:
+#           images: n148/springapp
 
 
 
