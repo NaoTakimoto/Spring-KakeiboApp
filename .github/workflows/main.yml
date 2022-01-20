@@ -64,12 +64,22 @@ jobs:
        
        #＊ コンテナビルド＆格納
       - name: Build and push 
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+        run: |
+         docker build -t noritoshi25/citest:latest .
+         docker push noritoshi25/citest:latest
+        
+#       uses: docker/build-push-action@v2
+#         with:
+#           context: .
+#           push: true
+#           tags: ${{ steps.meta.outputs.tags }}
+#           labels: ${{ steps.meta.outputs.labels }}
+          
+
+
+
+
+
   
   
                   
@@ -80,3 +90,6 @@ jobs:
 #           repository: NaoTakimoto/DockerCompose
 #           event-type: my-event
 #           client-payload: '{"imagetag": "${{ github.ref }}"}'
+
+
+
