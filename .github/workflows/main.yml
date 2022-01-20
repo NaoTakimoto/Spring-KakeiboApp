@@ -65,8 +65,8 @@ jobs:
        #＊ コンテナビルド＆格納
       - name: Build and push 
         run: |
-         docker build -t noritoshi25/citest:latest .
-         docker push noritoshi25/citest:latest
+         docker build -t n148/springapp:latest .
+         docker push n148/springapp:latest
         
 #       uses: docker/build-push-action@v2
 #         with:
